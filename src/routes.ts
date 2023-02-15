@@ -15,7 +15,7 @@ router.get('/:pokemonId', pokemonController.selectPokemon);
 // Team
 router.post('/createTeam', teamController.insertTeam);
 router.delete('/removeTeam/:teamId', teamController.insertTeam);
-router.get('/:teamId', teamController.selectTeam);
+router.get('/:teamId', teamController.selectAllTeams);
 
 
 export { router }
