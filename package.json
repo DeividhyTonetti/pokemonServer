@@ -4,10 +4,14 @@
   "description": "Simples API",
   "main": "src/server.ts",
   "scripts": {
-    "start": "npx ts-node-dev src/server.ts",
+    "start": "node ./dist/server.js",
     "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts",
-    "deploy" : "vercel deploy --prod",
+    "build": "tsc",
+    "deploy": "vercel deploy --prod",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "16.18.1"
   },
   "author": "Deividhy J. Tonetti",
   "license": "MIT",
