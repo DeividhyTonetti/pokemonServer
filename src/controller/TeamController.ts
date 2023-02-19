@@ -38,11 +38,11 @@ export class TeamController {
   }
 
   async removeTeam(request: Request, response: Response) { 
-    const { teamId } = request.body;
+    const { teamId } = request.params;
 
-    const team = await prismaClient.poketeam.delete({
+    const team = await prismaClient.poketeam.deleteMany({
         where: {
-            id: teamId,
+            name: teamId,
         },
     })
 

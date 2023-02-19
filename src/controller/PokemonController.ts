@@ -2,15 +2,13 @@ import { Request, Response } from "express";
 import { prismaClient } from "../database/prismaClient";
 
 export class PokemonController {
-    async updatePokemon(request: Request, response: Response) {
+    async createPokemon(request: Request, response: Response) {
 
-        const { teamId, pokemonId } = request.body;
+        const { teamName, pokemonId } = request.body;
 
-        const pokemon = await prismaClient.poketeam.update({
-            where: {
-                id: teamId
-            },
+        const pokemon = await prismaClient.poketeam.create({
             data: {
+                name: teamName,
                 pokemon_id: pokemonId
             }
         });
@@ -18,26 +16,13 @@ export class PokemonController {
         return response.json(pokemon)
     }
 
-    async selectPokemon(request: Request, response: Response) {
-
-        const { teamId } = request.body;
-
-        const pokemon = await prismaClient.poketeam.findUnique({
-            where: {
-                id: teamId,
-            },
-        })
-
-        return response.json(pokemon)
-    }
-
     async removePokemon(request: Request, response: Response) {
 
-        const { name } = request.body;
+        const { pokemonId } = request.params;
 
-        const pokemon = await prismaClient.poketeam.deleteMany({
+        const pokemon = await prismaClient.poketeam.delete({
             where: {
-                name
+                id: pokemonId
             },
         })
 

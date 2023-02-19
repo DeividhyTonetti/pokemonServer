@@ -12,7 +12,7 @@ datasource db {
 
 model Poketeam {
   id         String   @id @default(uuid())
-  name       String   @unique
+  name       String
   pokemon_id Int?    
   created_at DateTime @default(now())
 

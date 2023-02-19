@@ -8,14 +8,15 @@ const pokemonController = new PokemonController();
 const teamController = new TeamController();
 
 // Pokemon
-router.post('/addPokemon', pokemonController.updatePokemon);
+router.post('/addPokemon', pokemonController.createPokemon);
 router.delete('/removePokemon/:pokemonId', pokemonController.removePokemon);
-router.get('/:pokemonId', pokemonController.selectPokemon);
 
 // Team
 router.post('/createTeam', teamController.insertTeam);
-router.delete('/removeTeam/:teamId', teamController.insertTeam);
-router.get('/:teamId', teamController.selectAllTeams);
+router.delete('/removeTeam/:teamId', teamController.removeTeam);
+
+// General
+router.get('/getAllTeams', teamController.selectAllTeams);
 
 
 export { router }
