@@ -4,9 +4,10 @@
 
 <h1 align="center">
 
-  Pokemon Server 
+  [Pokemon Server](https://pokemon-server.vercel.app/getAllTeams)
   </h1>
 <p align="center"> Simples API - Gerenciador de times  de Pokémon </p>
+
 <div align="center">
   <img src="https://img.shields.io/static/v1?label=Licence&message=MIT&color=2874F0"/>
   <img src="https://img.shields.io/static/v1?label=Node&message=>14.17&color=00C300"/>
@@ -124,7 +125,7 @@ As seguintes ferramentas e bibliotecas foram usadas na construção do projeto:
 Para trabalhos futuros, desejamos incluir testes funcionais e uniários utilizando o [JEST](https://jestjs.io/pt-BR/), ou o [Cypress](https://www.cypress.io/)
 
 ### 🛠 Observações
-Este projeto back-end, tem como principal intuito ser simples, trabalhar como uma API. Então, temos controllers que fazem toda a comunição com o banco. 
+Este projeto back-end, tem como principal intuito ser simples, trabalhar como uma API. Então, temos controllers que fazem toda a comunição com o banco. Para ver o funcionamento basta entrar https://pokemon-server.vercel.app/getAllTeams
 
 ### Autor
 ---
